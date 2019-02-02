@@ -1,0 +1,188 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Express base",
+    "description": "Express base documentation for admin",
+    "version": "1.0"
+  },
+  "produces": [
+    "application/json"
+  ],
+  "host":"localhost:3000",
+  "basePath": "",
+  "paths": {
+
+    "/users/signUp": {
+      "post": {
+        "x-swagger-router-controller": "middleware-name1",
+        "operationId": "signUp",
+        "tags": [
+          "users"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name"       : "firstName",
+            "in"   : "formData",
+            "description": "firstName is required",
+            "required"   : true,
+            "type": "string",
+            "value": ""
+          },
+          {
+            "name": "lastName",
+            "in"   : "formData",
+            "description": "lastName is required",
+            "required": true,
+            "type": "string",
+            "value": ""
+          },
+          {
+            "name"       : "fullName",
+            "in"   : "formData",
+            "description": "fullName is required",
+            "required"   : true,
+            "type": "string",
+            "value": ""
+          },
+          {
+            "name": "countryCode",
+            "in"   : "formData",
+            "description": "countryCode is required",
+            "required": true,
+            "type": "string",
+            "value": ""
+          },
+          {
+            "name"       : "phoneNo",
+            "in"   : "formData",
+            "description": "phoneNo is required",
+            "required"   : true,
+            "type": "string",
+            "value": ""
+          },
+          {
+            "name"       : "emailId",
+            "in"   : "formData",
+            "description": "emailId is required",
+            "required"   : true,
+            "type": "string",
+            "value": ""
+          },
+          {
+            "name"       : "password",
+            "in"   : "formData",
+            "description": "password is required",
+            "required"   : true,
+            "type": "string",
+            "value": ""
+          },
+          {
+            "name"       : "deviceToken",
+            "in"   : "formData",
+            "description": "deviceToken is required",
+            "required"   : true,
+            "type": "string",
+            "value": ""
+          }
+        ],
+        "responses": {}
+      }
+    },
+
+
+    "/users/login": {
+      "get": {
+        "x-swagger-router-controller": "middleware-name1",
+        "operationId": "/users/login",
+        "tags": [
+          "users"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name"       : "key",
+            "in"         : "query",
+            "description": "key may be fullNumber and email",
+            "required"   : true,
+            "type"       : "string",
+            "value"      : ""
+          },
+          {
+            "name"       : "deviceToken",
+            "in"         : "query",
+            "description": "deviceToken",
+            "required"   : true,
+            "type"       : "string",
+            "value"      : ""
+          },
+          {
+            "name"       : "password",
+            "in"         : "query",
+            "description": "password is required",
+            "required"   : true,
+            "type"       : "string",
+            "value"      : ""
+          }
+        ],
+        "responses": {}
+      }
+    },
+
+
+    "/users/logout"  : {
+      "post": {
+        "x-swagger-router-controller": "middleware-name1",
+        "operationId": "/users/logout",
+        "tags": [
+          "users"
+        ],
+        "description": "/vendor/logout",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "description": "authorization is required",
+            "required": true,
+            "type": "string",
+            "value":""
+          }
+        ],
+        "responses": {}
+      }
+    },
+
+
+    "/users/verifyOTP"  : {
+      "post": {
+        "x-swagger-router-controller": "middleware-name1",
+        "operationId": "/users/verifyOTP",
+        "tags": [
+          "users"
+        ],
+        "description": "/vendor/verifyOTP",
+        "parameters": [
+          {
+            "name"       : "key",
+            "in"         : "formData",
+            "description": "key may be fullNumber and email",
+            "required"   : true,
+            "type"       : "string",
+            "value"      : ""
+          },
+          {
+            "name"       : "OTP",
+            "in"         : "formData",
+            "description": "OTP is required",
+            "required"   : true,
+            "type"       : "string",
+            "value"      : ""
+          }
+        ],
+        "responses": {}
+      }
+    }
+
+
+  }
+}
