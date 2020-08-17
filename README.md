@@ -10,6 +10,7 @@
 
  NODE_ENV=client npm start  to start the live server
 
+
  AS PROPER MVC STRUCTURE
 
  HAS SWAGGER INTEGRATED TO ACCESS THE SWAGGER   http://localhost:3000/admin-docs/
